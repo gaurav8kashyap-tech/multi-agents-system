@@ -5,12 +5,13 @@ from langchain_ollama import ChatOllama
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from tools import web_search , scrape_url 
+import os
 from dotenv import load_dotenv
 
 load_dotenv()
 
 #model setup 
-llm = ChatMistralAI(model = "ministral-3:8b",temperature=0)
+llm = ChatMistralAI(model = "ministral-3:8b",temperature=0,   api_key=  os.getenv("MISTRAL_API_KEY"))
 
 # llm = ChatOllama(
 #     model='llama3.2:1b',  #"ministral-3:8b",

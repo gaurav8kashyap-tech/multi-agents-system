@@ -10,17 +10,17 @@ from dotenv import load_dotenv
 load_dotenv()
 
 #model setup 
-#llm = ChatMistralAI(model = "ministral-3:8b",temperature=0)
+llm = ChatMistralAI(model = "ministral-3:8b",temperature=0)
 
 # llm = ChatOllama(
 #     model='llama3.2:1b',  #"ministral-3:8b",
 #     temperature=0
 # )
 
-llm = ChatOllama(
-    model="qwen3:8b",
-    temperature=0
-)
+# llm = ChatOllama(
+#     model="qwen3:8b",
+#     temperature=0
+# )
 
 #1st agent 
 def build_search_agent():

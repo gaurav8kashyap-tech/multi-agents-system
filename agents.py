@@ -10,8 +10,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+import streamlit as st
+
+api_key =  st.secrets["MISTRAL_API_KEY"]  #os.getenv("MISTRAL_API_KEY")
+
 #model setup 
-llm = ChatMistralAI(model = "ministral-3:8b",temperature=0,   api_key=  os.getenv("MISTRAL_API_KEY"))
+llm = ChatMistralAI(model = "ministral-3:8b",temperature=0,   api_key=  api_key )
 
 # llm = ChatOllama(
 #     model='llama3.2:1b',  #"ministral-3:8b",
